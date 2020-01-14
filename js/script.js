@@ -1,31 +1,30 @@
-let songNames = ["Circles"];
-
-songNames.forEach(function(song){
-    $("#songNames").append(song);
-})
-
-let songArtist = ["Post Malone"];
-
-songArtist.forEach(function(artist){
-    $("#songArtist").append(artist);
-})
-
+let songNames = [];
+let songArtist = [];
 let songLength= [];
-
-songLength.forEach(function(length){
-    $("#songLength").append(length);
-})
-
 let songImage= [];
-
-songImage.forEach(function(image){
-    $("#songImage").append(image);
-})
-
 let songLink= [];
+$('.addButton').click(function() {
+    let songName = $(".songName").val();
+    songNames.push(songName);
+    $("#songNames").empty();
+    songNames.forEach(function(song){
+         $("#songNames").append(song);
+    });
+    console.log(songNames)
 
-songLink.forEach(function(link){
-    $("#songLink").append(link);
-})
+//     // songArtist.forEach(function(artist){
+//         $("#songArtist").append(artist);
+//     });
 
+//     songLength.forEach(function(length){
+//         $("#songLength").append(length);
+//     });
 
+//     songImage.forEach(function(image){
+//         $("#songImage").append(image);
+//     });
+
+//     songLink.forEach(function(link){
+//         $("#songLink").append(link);
+//     });
+});

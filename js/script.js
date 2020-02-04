@@ -17,7 +17,7 @@ $('.addButton').click(function() {
         songLink: $(".songLink").val()
     };
 
-    playlist.append(newSong);
+    playlist.push(newSong);
     $("#songNames").empty();
     $("#songArtist").empty();
     $("#songLength").empty();
